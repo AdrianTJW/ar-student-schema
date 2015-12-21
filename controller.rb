@@ -24,9 +24,10 @@ attr_accessor :add, :delete, :complete, :list
 	end
 
 	def self.list
+		puts "Status of your tasks are:"
 		list = Todolist.all
 		list.each do |x|
-			puts x.tasks
+			puts "#{x.tasks} ---- Completed? #{x.complete}"
 		end
 	end
 end
